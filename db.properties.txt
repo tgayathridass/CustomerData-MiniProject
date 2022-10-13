@@ -1,0 +1,5 @@
+DBSERVER=ms.itversity.com
+DBNAME=retail_db
+DBUSER=retail_user
+DBPASSWORD=itversity
+----dummyLine----
