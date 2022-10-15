@@ -1,7 +1,8 @@
 #!/bin/bash
 
-hivetablecmd1='/user/file1.sql'
-hiveQuerycmd1=
+hivetablecmd1='/user/Hive_cmd_complx_query.sql'
+hiveQuerycmd2='/user/Hive_cmd_optmzed_table.sql'
+
 
 hive -f $hivecmd1
 
