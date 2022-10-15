@@ -1,23 +1,15 @@
 #!/bin/bash
 
-hivetablecmd1='/user/Hive_cmd_complx_query.sql'
-hiveQuerycmd2='/user/Hive_cmd_optmzed_table.sql'
 
-
-hive -f $hivecmd1
-
+for file in /user/Hive_scripts/*.sql; 
+do 
+hive -f $f
 result=`echo $?`
-
-if [ $result -ne 0 ]; then
-
-echo "we have encountered an hive Error while executing $hivecmd1"
-
-echo "Hive error number is: $result"
-
-exit 1
-
-else
-
-echo "no error, $hivecmd1 executed successfully. Hive tables are created"
-
+   if [ $result -ne 0 ]; then
+             echo "we have encountered an hive Error while executing $f"
+             echo "Hive error number is: $result"
+     exit 1
+   else
+             echo "no error, $f executed successfully. Hive tables are created"
 fi
+done
